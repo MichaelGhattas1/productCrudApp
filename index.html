@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="w-75 mx-auto my-4">
+
+        <div class="mb-3">
+            <label for="productName">productName :</label>
+            <input class="form-control my-2" onkeyup="validateProductName (this.value); ckeckBtn () ; " type="text" id="productName">
+            <span id="ProductNameAlert" class="small text-muted fc-red"></span>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice">productPrice :</label>
+            <input class="form-control my-2" type="number" onkeyup="validateProductPrice (this.value) ; ckeckBtn () ;" id="productPrice">
+            <span id="ProductPriceAlert" class="small text-muted fc-red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="productCategory">productCategory :</label>
+            <input class="form-control my-2"  onkeyup="validateProductCategory (this.value) ; ckeckBtn () ;" type="text" id="productCategory">
+            <span id="ProductCategoryAlert" class="small text-muted fc-red"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="productDesc">productDesc :</label>
+            <textarea class="form-control my-2"  onkeyup="validateProductDesc (this.value); ckeckBtn () ;" type="text" id="productDesc"></textarea>
+            <span id="ProductDescAlert" class="small text-muted fc-red"></span>
+
+        </div  >
+        <button onclick="addProduct();" disabled='disabled ' id = "mainButton" class="btn btn-primary">add product</button>
+    </div>
+    <div class="w-75 mx-auto">
+        <label for=""> Search</label>
+            <input class="form-control" onkeyup="searchProduct(this.value);"  type="text">
+
+    </div>
+
+    <div class="w-75 mx-auto my-5">
+        
+            <table class="table">
+                <thead >
+                    <th>Index</th>
+                    <th>ProductName</th>
+                    <th>ProductPrice</th>
+                    <th>Category</th>
+                    <th>description</th>
+                    <th>Update</th>
+                    <th>Delate</th>
+                </thead>
+                <tbody id="tableBody">
+                
+                </tbody>
+    
+            </table>
+
+    
+       
+
+    </div>
+   
+
+    <script src="main.js"></script>
+</body>
+
+</html>
