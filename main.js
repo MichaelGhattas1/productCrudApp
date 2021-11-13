@@ -148,7 +148,7 @@ function validateProductCategory ()
 }
 function validateProductDesc ()
 {
-    var regex = /^[A-Z][A-Z a-z]{3,100}$/;
+    var regex = /^[A-Z0-9a-z][A-Z a-z]{3,100}$/;
     if(regex.test(productDescInput.value)==true)
     {
         document.getElementById( "ProductDescAlert").innerHTML= "";
